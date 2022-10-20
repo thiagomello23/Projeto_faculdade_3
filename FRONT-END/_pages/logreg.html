@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../_css/stylelogreg.css">
+    <title>Login / Registro</title>
+</head>
+
+<body>
+
+    <!-- <main>
+        <div id="caixa">
+            <div id="caixaesq">
+                <div id="caixaesqlog">
+                    <div id="cablog">
+                        <p class="textocab">Login</p>
+                    </div>
+
+                    <form id="logemail" action="#" class="formac">  
+                        <label class="logemail" for="fname">E-mail</label><br>
+                        <input class="logemail" type="email" placeholder="Digite seu E-mail" id="emailLogin" name="fname" size="37%"><br><br>
+                        <label class="logemail" for="lname">Senha</label><br>
+                        <input class="logemail" type="password" placeholder="Digite sua Senha" id="senhaLogin" size="37%"><br><br>
+                        <input class="logemailb" type="submit" value="Entrar" cols="25" id="btnLogin">
+                    </form>
+
+                </div>
+            </div>
+            <div id="caixadir">
+                <div id="caixadirreglog">
+                    <div id="cabreg">
+                        <p class="textocab">Registro</p>
+                    </div>
+                    
+                    <form id="logemail" action="#" class="formac">  
+                        <label class="logemail" for="fname">Nome:</label><br>
+                        <input class="logemail" type="Digite seu Nome" placeholder="Digite o nome da sua empresa" name="fname" size="37" id="nomeEmpresa"><br><br>
+
+                        <label class="logemail" for="fname">E-mail</label><br>
+                        <input class="logemail" type="email" placeholder="Digite seu e-mail" name="fname" size="37" id="emailContato"><br><br>
+
+                        <label class="logemail" for="lname">Cnpj:</label><br>
+                        <input class="logemail" type="text" placeholder="Digite o cnpj da empresa" size="37" id="cnpj"><br><br>
+
+                        <label class="logemail" for="lname">Senha</label><br>
+                        <input class="logemail" type="password" placeholder="Digite sua senha" size="37" id="senha"><br><br>
+
+                        <label class="logemail" for="lname">Confirma Senha</label><br>
+                        <input class="logemail" type="password" placeholder="Digite sua senha novamente" size="37" id="confirmaSenha"><br><br>
+
+                        <input class="logemailb" type="submit" value="Registrar" cols="25" id="btnCadastro">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </main> -->
+
+    <main>
+        <div class="logreg_wrapper">
+            <div class="login_container">
+                <div class="login_content">
+                    <div class="login_content_header">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="login_content_form">
+                        <form action="">
+                            <div class="alert_danger hidden" id="alertLog">
+                            </div>
+                            <div class="form_div">
+                                <label for="" class="form_content_label">Email:</label>
+                                <input type="email" class="form_content_input" placeholder="Digite seu email" id="emailLogin">
+                            </div>
+                            <div class="form_div">
+                                <label for="" class="form_content_label">Senha:</label>
+                                <input type="password" class="form_content_input" placeholder="Digite sua senha" id="senhaLogin">
+                            </div>
+                            <div class="btn_wrapper">
+                                <button type="submit" class="form_content_btn" id="btnLogin">Entrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="registro_container">
+                <div class="login_content">
+                    <div class="login_content_header">
+                        <h1>Registro</h1>
+                    </div>
+                    <div class="login_content_form">
+                        <form action="">
+                            <div class="alert_danger hidden" id="alertReg">
+                            </div>
+                            <div class="form_div">
+                                <label for="" class="form_content_label">Nome:</label>
+                                <input type="email" class="form_content_input" placeholder="Digite o nome da empresa" id="nomeEmpresa">
+                            </div>
+                            <div class="form_div">
+                                <label for="" class="form_content_label">Email:</label>
+                                <input type="email" class="form_content_input" placeholder="Digite seu email" id="emailContato">
+                            </div>
+                            <div class="form_div">
+                                <label for="" class="form_content_label">CNPJ:</label>
+                                <input type="text" class="form_content_input" placeholder="Digite sua senha" id="cnpj">
+                            </div>
+                            <div class="form_div">
+                                <label for="" class="form_content_label">Senha:</label>
+                                <input type="password" class="form_content_input" placeholder="Digite sua senha" id="senha">
+                            </div>
+                            <div class="form_div">
+                                <label for="" class="form_content_label">Confirma Senha:</label>
+                                <input type="password" class="form_content_input" placeholder="Digite sua senha novamente" id="confirmaSenha">
+                            </div>
+                            <div class="btn_wrapper">
+                                <button type="submit" class="form_content_btn" id="btnCadastro">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../_script/logreg.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,408 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+main {
+    width: 100%;
+}
+
+#home {
+    width: 100%;
+    min-height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 1px solid rgb(36, 4, 248); */
+}
+
+/* inicio do menu */
+/* inicio do menu */
+/* inicio do menu */
+#menu {
+    margin-top: 0px;
+    width: 100%;
+    height: 37px;
+    background-color: black;
+    /* border: 1px solid red; */
+
+}
+
+ul {
+    color: rgb(2, 0, 0);
+    font-weight: 900;
+    list-style-type: none;
+    /* tira o circlo */
+    text-decoration: none;
+    /* tira o soblinhado */
+    text-align: right;
+    /* centraliza o texto */
+}
+
+#ulmenuli {
+    margin-top: 8px;
+    /*mar top Texto Menu*/
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    /* deixa o testo na horisontal */
+    color: rgb(255, 255, 255);
+}
+
+#ulmenuli a {
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+
+/* fim do menu */
+/* fim do menu */
+/* fim do menu */
+
+#cabecalho {
+    margin-left: 180px;
+    /*text-align: center;*/
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#cabecalhot {
+    margin-top: 20px;
+    margin-left: 180px;
+    /* width: 35%; */
+    /* height: 35%; */
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+}
+
+#dadosempresa {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: center;
+    /* align-items: center; */
+
+}
+
+#caixaesquerda {
+    width: 200px;
+    height: 237px;
+    /* height: 120%; */
+    justify-content: center;
+    /* border: 1px solid rgb(252, 0, 0); */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#foto {
+    height: 200px;
+    width: 200px;
+    /* margin-left: 40%;
+    margin-top: 10%; */
+    background-color: #D9D9D9;
+    border-radius: 0px;
+    /* border: 1px solid red; */
+
+}
+
+#caixadireita {
+    /* display: flex; */
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    /* width: 50%; */
+    /* margin-right: 15px; */
+    height: 260px;
+    /* border: 1px solid darkgoldenrod */
+}
+
+#textoinformacoesempresa {
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+    /* height: 50px; */
+    /* border: 1px solid greenyellow; */
+}
+
+#dadosinformacoesempresa {
+    width: 100%;
+    /* height: 135px; */
+    /* border: 1px solid yellow; */
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+#dadosempresa2 {
+    width: 50%;
+    /* height: 130px; */
+    /* border: 1px solid blueviolet; */
+    text-align: center;
+}
+
+#dadosul{
+    display: flex;
+    flex-direction: column;
+}
+
+.cordonumero{
+    color: #00B4D8;
+    /* display: flex; */
+}
+
+.cordonumero2{
+    color: #EF233C;
+    /* display: flex; */
+}
+
+#infoveiculos {
+    /* width: 50%; */
+    /* height: 130px; */
+    /* border: 1px solid rgb(48, 230, 24); */
+    text-align: center;
+}
+
+#trocasenha {
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+
+    /* border: 1px solid blue; */
+}
+
+#caixalista {
+    /* margin-top: 50px; */
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    /* height: 590px; */
+    /* border: 1px solid red; */
+}
+.caixalistatitulo{
+    margin-top: 20px;
+}
+
+#paraqueserve {
+    width: 100%;
+    height: 520px;
+    /* background-color: rgb(111, 106, 148); */
+    /* border: 1px solid firebrick; */
+}
+
+#dadoshor{
+    margin: auto;
+    align-items: center;
+    width: 50%;
+    height: 370px;    
+    /* border: 1px solid rgb(72, 0, 255); */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cadesqu{
+    text-align: center;
+    width: 30%;
+    height: 50px;
+    background-color: #D9D9D9;
+    /* border: 1px solid yellow; */
+    border-right: 1px solid black;
+}
+
+.caddir{
+    text-align: center;
+    width: 70%;
+    height: 50px;
+    background-color: #D9D9D9;
+    /* border: 1px solid rgb(14, 230, 68); */
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.navegador{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.disponivel{
+    color: rgb(64, 151, 37);
+}
+
+#cadastrenovoveiculo{
+    padding: 8px 16px;
+    background-color: #00B4D8;
+    color: #fff;
+
+}
+
+.nvf{
+    width: 50%;
+    height: 80px;   
+    /* border: 1px solid rgb(14, 230, 68); */
+}
+.sd{
+    width: 50%;
+    height: 80px;
+    /* border: 1px solid rgb(79, 131, 92); */
+}
+
+
+
+#titulo {
+    margin-top: 20%;
+    font-size: 44px;
+    margin-left: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#textopos {
+    margin-top: 0%;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}
+
+
+#fotodir {
+    width: 40%;
+    height: 721px;
+    background-image: url(../_img/caixafotodireita.png);
+    background-color: blueviolet;
+    float: right;
+}
+
+#porqueutilizar {
+    width: 100%;
+    height: 721px;
+    background-color: #E7EDEE;
+    border: 1px solid red;
+
+}
+
+#tituloporqueutilizar {
+    margin: 20px auto 20px auto;
+    margin: auto;
+    width: 80%;
+    height: 150px;
+    /*background-color: #06859b;*/
+    color: black;
+    font-size: 44px;
+    text-align: center;
+    line-height: 150px;
+    border: 0px solid red;
+}
+
+#caixas3 {
+    width: 100%;
+    height: 571px;
+    border: 0px solid blue;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.cxa {
+    background-color: rgba(153, 205, 50, 0.062);
+    width: 20%;
+    height: 350px;
+    border: 0px solid rgb(4, 0, 255);
+    margin: 0px 20px 0px 20px;
+    /*background-image: url(_img/pontos.png);*/
+    color: black;
+    justify-content: center;
+}
+
+.ponto3 {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    background: url(../_img/pontos.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    border: 0px solid red;
+
+}
+
+
+.icone {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    border: 0px solid red;
+}
+
+#engrenagem {
+    width: 40px;
+    height: 40px;
+    background-image: url(../_img/engrenagem.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
+
+#relogio {
+    width: 40px;
+    height: 40px;
+    background-image: url(../_img/relogio.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
+
+#impressora {
+    width: 40px;
+    height: 40px;
+    background-image: url(../_img/impressora.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
+
+.textoporque {
+    color: black;
+    font-size: 22px;
+    text-align: justify;
+    margin: 25px;
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+#titulorodape {
+    font-size: 20px;
+    color: #BDC3C7;
+}
+
+.titulorodape1 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #BDC3C7;
+
+}
+
+.titulorodape2 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #BDC3C7;
+
+}

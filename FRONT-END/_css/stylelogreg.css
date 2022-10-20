@@ -1,0 +1,219 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* #caixa {
+    margin: auto;
+    margin-top: 0px;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(43, 87, 87, 0);
+    border: 0px solid red;
+}
+
+#caixaesq {
+    width: 50%;
+    height: 575px;
+    background-color: #243748;
+    border: 0px solid blue;
+    float: left;
+}
+
+#caixaesqlog {
+    width: 70%;
+    height: 266px;
+    margin: auto;
+    margin-top: 120px;
+    background-color: #F8F9FA;
+} */
+
+/* menu Login */
+/* #cablog {
+    width: 100%;
+    height: 30px;
+    background-color: #D9D9D9;
+    border: 0px solid red;
+} */
+
+/* #logemail{
+    width: 80%;
+    margin-top: 30px;
+    margin-left: auto;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+} */
+/*Tira a borda dos input´s*/
+/* input, textarea, select {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} */
+/*Tira a borda dos input´s*/
+
+
+/* Botão entrar / Registrar */
+/* .logemailb{
+    width: 150px;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 25%;
+    border-radius: 5px;
+    border: 0px solid rgb(255, 52, 1);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    cursor: pointer;
+}
+.formac{
+    margin: auto;
+    border: 0px solid rgb(255, 255, 255);
+
+} */
+
+
+
+
+/* Lateral Direita */
+/* Lateral Direita */
+/* Lateral Direita */
+/* Lateral Direita */
+/* Lateral Direita */
+/* #caixadir {
+    width: 50%;
+    height: 575px;
+    background-color: #19B0EC;
+    border: 0px solid rgb(60, 255, 0);
+    float: right;
+}
+
+#caixadirreglog {
+    width: 70%;
+    height: 378px;
+    margin: auto;
+    margin-top: 65px;
+    background-color: #F8F9FA;
+} */
+
+/* menu Registro */
+/* #cabreg {
+    width: 100%;
+    height: 30px;
+    background-color: #D9D9D9;
+
+}
+
+.textocab {
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+} */
+
+.logreg_wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+}
+
+.login_container {
+    width: 50%;
+    min-height: 100vh;
+    background-color: #243748;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registro_container {
+    width: 50%;
+    min-height: 100vh;
+    background-color: #456FE8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_content {
+    width: 450px;
+}
+
+.login_content_header h1 {
+    width: 100%;
+    background-color: #D9D9D9;
+    text-align: center;
+    padding: 10px;
+}
+
+.login_content_form {
+    width: 100%;
+    background-color: #F8F9FA;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_content_form form {
+    width: 80%;
+}
+
+.form_div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form_content_label {
+    font-size: 20px;
+}
+
+.form_content_input {
+    outline: none;
+    padding: 8px 16px;
+    border: none;
+    font-size: 16px;
+    margin-top: 5px;
+    height: 50px;
+    width: 100%;
+}
+
+.btn_wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.form_content_btn {
+    border: none;
+    color: #fff;
+    background-color: #43BCCD;
+    padding: 8px 16px;
+    font-size: 18px;
+    width: 50%;
+    cursor: pointer;
+}
+
+/* Alerts */
+.alert_danger {
+    width: 100%;
+    background-color: #FF4D6D;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
