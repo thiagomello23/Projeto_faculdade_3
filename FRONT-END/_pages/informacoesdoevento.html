@@ -18,7 +18,8 @@
 </head>
 
 <body>
-    <main>
+
+    <!-- <main>
         <div id="menu">
             <ul id="ulmenu">
                 <a href="../trab2semestre.html">
@@ -66,14 +67,6 @@
 
         </div>
 
-
-        <!-- <div class="nnome"><span class="nnome">Nome : </span><span>nome do evento</span></div>
-                <div class="ntipo"><span class="ntipo">Tipo : </span><span>Reparo</span></div>
-                <div class="ndata"><span>Data : </span><span>05/10/2022</span></div>
-                <div class="ndesc"><span>Descrição : </span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></div>
-                <div id="editar"><p id="botaoeditar">Editar</p></div> -->
-
-
         <Footer>
             <p id="titulorodape">Serviços</p>
             <p class="titulorodape1">Login/Registro</p>
@@ -82,7 +75,45 @@
             <p class="titulorodape1">Informações da Frota</p>
             <p class="titulorodape2">Todos os Direitos reservados ₢</p>
         </Footer>
-    </main>
-</body>
+    </main> -->
 
+    <main class="main_container">
+        <header class="header_container">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Perfil</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main_container_wrapper">
+            <div class="main_content">
+                <h1>Informações do evento</h1>
+                <div class="evento_linha">
+                    <h3>Nome:</h3>
+                    <span class="evento_nome" id="eventoTitulo"></span>
+                </div>
+                <div class="evento_linha">
+                    <h3>Tipo:</h3>
+                    <span class="evento_tipo" id="eventoTipo">Reparo</span>
+                </div>
+                <div class="evento_coluna">
+                    <h3>Data de cadastro:</h3>
+                    <span class="evento_tipo" id="eventoData">05/10/2008</span>
+                </div>
+                <div class="evento_coluna">
+                    <h3>Descrição do ocorrido:</h3>
+                    <textarea rows="10" class="evento_descricao" readonly id="eventoDescricao"></textarea>
+                </div>
+                <a href="../_pages/edicaoevento.html?id=8" class="evento_edit_redirect">
+                    Editar evento
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../_script/informacoesevento.js"></script>
+
+</body>
 </html>

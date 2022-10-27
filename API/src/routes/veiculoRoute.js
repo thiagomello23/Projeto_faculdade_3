@@ -41,23 +41,18 @@ router.get('/veiculos/all', checkToken, async (req, res) => {
 
 });
 
-// Puxa todos os dados de um veiculo em especifico, seu funcionario atrelado e 5 eventos
-router.get('/veiculos/', checkToken, async (req, res) => {
+// Puxa todos os dados de um veiculo em especifico
+router.get('/veiculos/:veiculoId', checkToken, async (req, res) => {
 
     // Id do veiculo e id da empresa
-    const veiculoId = req.query.veiculoId;
-    const empresaId = req.query.empresaId;
+    const veiculoId = req.params.veiculoId;
 
-    if(!veiculoId || !empresaId) return res.status(500).json(messageHandler("Dados invalidos!"))
+    if(!veiculoId) return res.status(500).json(messageHandler("Dados invalidos!"))
 
     const veiculoData = await Veiculos.findOne({
         where: {
-            [Op.and]: [
-                {id: veiculoId},
-                {empresaid: empresaId}
-            ]
-        },
-        include: [Funcionarios, EventosVeiculos]
+            id: veiculoId,
+        }
     })
 
     if(!veiculoData) return res.status(500).json(messageHandler("Veiculo nao encontrado!"))
@@ -71,7 +66,7 @@ router.post('/veiculos/', upload.single('veiculoImg'), checkToken, async (req, r
 
     // renavan e placa sao unicos
     let imgName;
-    const { modelo, renavan, placaVeiculo} = req.body;
+    const { modelo, renavan, placaVeiculo } = req.body;
     
     // Validar todos os dados
     if(req.file) {
@@ -125,8 +120,62 @@ router.post('/veiculos/', upload.single('veiculoImg'), checkToken, async (req, r
 });
 
 // atualiza um veiculo
-router.put('/veiculos/:veiculoId/', (req, res) => {
+router.put('/veiculos/', upload.single('veiculoImg'), checkToken, async (req, res) => {
 
+    let imgName;
+    const { modelo, renavan, placaVeiculo, veiculoId } = req.body;
+
+    // Validacao minima de dados
+    if(!modelo || !renavan || !placaVeiculo || !veiculoId) 
+    return res.status(500).json(messageHandler("Necessario preencher todos os dados!"));
+
+    // Valida imagem
+    if(req.file) {
+        imgName = req.file.filename;
+    }
+
+    // Puxa os dados
+    const veiculoDataAtual = await Veiculos.findByPk(veiculoId);
+
+    if(!veiculoDataAtual) return res.status(500).json(messageHandler("Dados invalidos!"))
+
+    const dataValidation = await Veiculos.findOne({
+        where: {
+            [Op.or]: [
+                {renavan: renavan},
+                {placaVeiculo: placaVeiculo}
+            ]
+        }
+    })
+
+    // Caso haja dados
+    if(dataValidation) {
+
+        if(dataValidation.renavan == renavan && veiculoDataAtual.renavan != dataValidation.renavan) 
+        return res.status(500).json(messageHandler("Renavam ja cadastrado!"))
+
+        if(dataValidation.placaVeiculo == placaVeiculo && veiculoDataAtual.placaVeiculo != dataValidation.placaVeiculo) 
+        return res.status(500).json(messageHandler("Placa de veiculo ja cadastrada!"))
+
+    }
+
+    // Atualizar no banco de dados
+    await Veiculos.update({
+        modelo: modelo,
+        renavan: renavan,
+        placaVeiculo: placaVeiculo,
+        veiculoImgPath: imgName
+    }, {
+        where: {
+            id: veiculoId
+        }
+    })
+    
+    // Retorno a resposta
+    res.status(200).json(messageHandler(
+        'Dados atualizados com sucesso!',
+        false
+    ))
 
 
 });

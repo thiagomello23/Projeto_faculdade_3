@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- fontawesome -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!--<script src="https://kit.fontawesome.com/89322f4ae0.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="../_wwp/_css/all.css">
+    <!-- LIGUEI OUTRO CSS -->
+    <!-- <link rel="stylesheet" href="../_css/style_cad_eventos.css"> -->
+    <link rel="stylesheet" href="../_css/style_cad_veiculo.css">
+    <title>Projeto 2° Semestre</title>
+</head>
+
+<body>
+
+    <!-- <main>
+        <div id="menu">
+            <ul id="ulmenu">
+                <a href="../trab2semestre.html">
+                    <li id="ulmenuli">Home</li>
+                </a>
+                <a href="#">
+                    <li id="ulmenuli">Sobre</li>
+                </a>
+                <a href="../projeto2semestre/_pages/logreg.html">
+                    <li id="ulmenuli">Perfil</li>
+                </a>
+            </ul>
+        </div>
+        <div id="caixa">
+            <div id="divtituloinfoevent">
+                <p id="tituloinfoevent">Cadastro de evento</p>
+            </div>
+            <div id="divtituloinfoevent">
+                <p id="tituloinfoevent_caso">Cadastre um evento ocorrido com o seu veiculo. A data do evento é gerada automaticamente assim que o evento é cadastrado</p>
+            </div>
+        </div>
+        <div id="cadastro">
+            <div id="informacoes_cadastrais">
+                <label for="">Nome do ocorrido: :</label>
+                <input type="text" value="Nome do ocorrido:"><br>
+                <label for="">Tipo :</label>
+                <input type="text" value="selecione">
+                <label for="">Descrição :</label>
+                <input type="email" value="Informe o ocorrido">
+            </div>
+
+            <div id="botcadastro">
+                <div id="botaocadastro">
+                    <p id="textobotao">Cadastrar</p>
+                </div>
+            </div>
+        </div>
+        <Footer>
+            <p id="titulorodape">Serviços</p>
+            <p class="titulorodape1">Login/Registro</p>
+            <p class="titulorodape1">Menu de Usuário</p>
+            <p class="titulorodape1">Adicionar novo veículo</p>
+            <p class="titulorodape1">Informações da Frota</p>
+            <p class="titulorodape2">Todos os Direitos reservados ₢</p>
+        </Footer>
+    </main> -->
+
+    <main class="main_container">
+        <header class="header_container">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Perfil</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="form_title">
+            <h1>Edição de evento</h1>
+            <span>Edite as informações de um evento ocorrido com a sua empresa!</span>
+        </div>
+        <div class="form_container">
+            <form action="" class="form_container_content">
+                <div class="alert alert_danger hidden" id="alertCadastro"></div>
+
+                <div class="form_div">
+                    <label for="" class="form_input_label">Nome do ocorrido:</label>
+                    <input type="text" placeholder="Digite um nome para este evento" class="form_input" id="nomeOcorrido">
+                </div>
+                <div class="form_div">
+                    <label for="" class="form_input_label">Tipo:</label>
+                    <select id="tipoOcorrido" class="form_input_select">
+                        <option value="Acidente" id="acidenteTipo">Acidente</option>
+                        <option value="Reparo" id="reparoTipo">Reparo</option>
+                    </select>
+                </div>
+
+                <div class="form_div">
+                    <label for="" class="form_input_label">Descrição:</label>
+                    <textarea class="form_textarea" placeholder="Digite a descrição do ocorrido!" id="descricaoOcorrido"></textarea>
+                </div>
+
+                <button type="submit" class="form_btn" id="editBtn">Editar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="../_script/edicaoevento.js"></script>t
+
+</body>
+</html>
