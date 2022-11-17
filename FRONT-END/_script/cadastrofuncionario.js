@@ -10,7 +10,7 @@ cadastroBtn.addEventListener('click', async (e) => {
     const identificadorFuncionario = document.getElementById('identificadorFuncionario').value;
 
     // Validacao minima de dados
-    if(!nomeFuncionario || !telefoneFuncionario || !emailFuncionario) {
+    if(!nomeFuncionario || !telefoneFuncionario) {
         alertCadastroHandler(true, 'Por favor preencha todos os campos!');
         return;
     }

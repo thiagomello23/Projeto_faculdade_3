@@ -21,21 +21,19 @@ router.get('/veiculos/all', checkToken, async (req, res) => {
     const token = req.headers['authorization'];
     const data = jwt.decode(token);
 
-    // Paginacao
+    // // Paginacao
     // const limit = req.query.limit;
     // const offset = req.query.offset;
 
     if(!data.id) return res.status(500).json(messageHandler("Dados invalidos!"))
 
-    const veiculosDados = await Veiculos.findAndCountAll({
+    const veiculosDados = await Veiculos.findAll({
         where: {
             empresaid: data.id
-        },
-        // limit: limit,
-        // offset: offset
+        }
     })
     
-    if(!veiculosDados || veiculosDados.length == 0) return res.status(500).json(messageHandler("Voce nao possui nenhum veiculo cadastrado!"));
+    if(!veiculosDados || veiculosDados.length == 0) return res.status(500).json(messageHandler("Voce não possui nenhum veiculo cadastrado!"));
 
     res.status(200).json(veiculosDados);
 
@@ -49,13 +47,20 @@ router.get('/veiculos/:veiculoId', checkToken, async (req, res) => {
 
     if(!veiculoId) return res.status(500).json(messageHandler("Dados invalidos!"))
 
+    // Preciso fazer 2 includes
     const veiculoData = await Veiculos.findOne({
         where: {
             id: veiculoId,
-        }
+        },
+        include: [
+            Funcionarios,
+            EventosVeiculos
+        ]
     })
 
     if(!veiculoData) return res.status(500).json(messageHandler("Veiculo nao encontrado!"))
+
+    console.log(veiculoData);
 
     res.status(200).json(veiculoData);
 
@@ -67,11 +72,15 @@ router.post('/veiculos/', upload.single('veiculoImg'), checkToken, async (req, r
     // renavan e placa sao unicos
     let imgName;
     const { modelo, renavan, placaVeiculo } = req.body;
-    
+
     // Validar todos os dados
     if(req.file) {
         imgName = req.file.filename;
     }
+
+    // DEBUG
+    console.log(req.body);
+    console.log(req.file);
 
     // validacao minima de dados
     if(!modelo || !renavan || !placaVeiculo) return res.status(500).json(messageHandler("Necessario preencher todos os dados!"))

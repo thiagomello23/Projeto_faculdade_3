@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     width: 100%;
     height: 100%;
     background-color: rgb(255, 255, 255);
@@ -19,39 +19,28 @@ main {
     min-height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
-    /* border: 1px solid rgb(36, 4, 248); */
 }
 
-/* inicio do menu */
-/* inicio do menu */
-/* inicio do menu */
 #menu {
     margin-top: 0px;
     width: 100%;
     height: 37px;
     background-color: black;
-    /* border: 1px solid red; */
-
 }
 
 ul {
     color: rgb(2, 0, 0);
     font-weight: 900;
     list-style-type: none;
-    /* tira o circlo */
     text-decoration: none;
-    /* tira o soblinhado */
     text-align: right;
-    /* centraliza o texto */
 }
 
 #ulmenuli {
     margin-top: 8px;
-    /*mar top Texto Menu*/
     margin-left: 5px;
     margin-right: 5px;
     display: inline-block;
-    /* deixa o testo na horisontal */
     color: rgb(255, 255, 255);
 }
 
@@ -60,13 +49,8 @@ ul {
     color: rgb(255, 0, 0);
 }
 
-/* fim do menu */
-/* fim do menu */
-/* fim do menu */
-
 #cabecalho {
     margin-left: 180px;
-    /*text-align: center;*/
     font-size: 40px;
     font-weight: 700;
     color: #fff;
@@ -75,8 +59,6 @@ ul {
 #cabecalhot {
     margin-top: 20px;
     margin-left: 180px;
-    /* width: 35%; */
-    /* height: 35%; */
     text-align: center;
     font-size: 28px;
     font-weight: 400;
@@ -91,18 +73,13 @@ ul {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    /* flex-direction: column; */
     align-items: center;
-    /* align-items: center; */
-
 }
 
 #caixaesquerda {
     width: 200px;
     height: 237px;
-    /* height: 120%; */
     justify-content: center;
-    /* border: 1px solid rgb(252, 0, 0); */
     display: flex;
     flex-wrap: wrap;
 }
@@ -110,45 +87,27 @@ ul {
 #foto {
     height: 200px;
     width: 200px;
-    /* margin-left: 40%;
-    margin-top: 10%; */
     background-color: #D9D9D9;
     border-radius: 0px;
-    /* border: 1px solid red; */
-
 }
 
 #caixadireita {
-    /* display: flex; */
-    /* flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-    /* width: 50%; */
-    /* margin-right: 15px; */
     height: 260px;
-    /* border: 1px solid darkgoldenrod */
 }
 
 #textoinformacoesempresa {
     margin-top: 30px;
     text-align: center;
     width: 100%;
-    /* height: 50px; */
-    /* border: 1px solid greenyellow; */
 }
 
 #dadosinformacoesempresa {
     width: 100%;
-    /* height: 135px; */
-    /* border: 1px solid yellow; */
     display: flex;
-    /* flex-wrap: wrap; */
 }
 
 #dadosempresa2 {
     width: 50%;
-    /* height: 130px; */
-    /* border: 1px solid blueviolet; */
     text-align: center;
 }
 
@@ -159,18 +118,13 @@ ul {
 
 .cordonumero{
     color: #00B4D8;
-    /* display: flex; */
 }
 
 .cordonumero2{
     color: #EF233C;
-    /* display: flex; */
 }
 
 #infoveiculos {
-    /* width: 50%; */
-    /* height: 130px; */
-    /* border: 1px solid rgb(48, 230, 24); */
     text-align: center;
 }
 
@@ -178,17 +132,12 @@ ul {
     margin-bottom: 30px;
     text-align: center;
     width: 100%;
-
-    /* border: 1px solid blue; */
 }
 
 #caixalista {
-    /* margin-top: 50px; */
     text-align: center;
     margin: auto;
     width: 70%;
-    /* height: 590px; */
-    /* border: 1px solid red; */
 }
 .caixalistatitulo{
     margin-top: 20px;
@@ -197,8 +146,6 @@ ul {
 #paraqueserve {
     width: 100%;
     height: 520px;
-    /* background-color: rgb(111, 106, 148); */
-    /* border: 1px solid firebrick; */
 }
 
 #dadoshor{
@@ -206,7 +153,6 @@ ul {
     align-items: center;
     width: 50%;
     height: 370px;    
-    /* border: 1px solid rgb(72, 0, 255); */
     display: flex;
     flex-wrap: wrap;
 }
@@ -216,7 +162,6 @@ ul {
     width: 30%;
     height: 50px;
     background-color: #D9D9D9;
-    /* border: 1px solid yellow; */
     border-right: 1px solid black;
 }
 
@@ -225,7 +170,6 @@ ul {
     width: 70%;
     height: 50px;
     background-color: #D9D9D9;
-    /* border: 1px solid rgb(14, 230, 68); */
     display: flex;
     flex-wrap: wrap;
 
@@ -253,12 +197,10 @@ ul {
 .nvf{
     width: 50%;
     height: 80px;   
-    /* border: 1px solid rgb(14, 230, 68); */
 }
 .sd{
     width: 50%;
     height: 80px;
-    /* border: 1px solid rgb(79, 131, 92); */
 }
 
 
@@ -299,7 +241,6 @@ ul {
     margin: auto;
     width: 80%;
     height: 150px;
-    /*background-color: #06859b;*/
     color: black;
     font-size: 44px;
     text-align: center;
@@ -324,7 +265,6 @@ ul {
     height: 350px;
     border: 0px solid rgb(4, 0, 255);
     margin: 0px 20px 0px 20px;
-    /*background-image: url(_img/pontos.png);*/
     color: black;
     justify-content: center;
 }
@@ -405,4 +345,297 @@ footer {
     font-size: 15px;
     color: #BDC3C7;
 
+} */
+
+.main_container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FBFBFB;
+    position: relative;
+}
+
+.header_container {
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    margin: 0;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.info_empresa_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+    border-bottom: 1px solid #000;
+}
+
+.info_empresa_image {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.info_empresa_image img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15px;
+}
+
+.info_empresa_btn {
+    padding: 8px 16px;
+    font-size: 18px;
+    background-color: #00B4D8;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.info_empresa_btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.info_empresa_conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.info_empresa_dados {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+    justify-content: center;
+}   
+
+.info_empresa_sensivel {
+    display: flex;
+    flex-direction: column;
+}
+
+.info_empresa_sensivel li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.info_empresa_sensivel li span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.info_empresa_contadores {
+    display: flex;
+    flex-direction: column;
+}
+
+.info_empresa_contadores li {
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.info_empresa_contador_cor {
+    color: #00B4D8;
+}
+
+.info_empresa_evento_cor {
+    color: #EF233C;
+}
+
+.info_empresa_veiculos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 150px;
+    position: relative;
+}
+
+.barra_pesquisa {
+    margin-bottom: 20px;
+}
+
+.barra_pesquisa input {
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 8px 16px;
+}
+
+.pagination_container {
+    margin-bottom: 1px;
+}
+
+.veiculo_conteudo {
+    display: flex;
+    padding: 10px;
+    background-color: #D9D9D9;
+    margin-bottom: 20px;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.veiculo_conteudo:hover {
+    text-decoration: none;
+}
+
+.veiculo_image {
+    width: 100px;
+    height: 100px;
+    margin-right: 8px;
+}
+
+.veiculo_conteudo h5 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+
+}
+
+.veiculo_conteudo h4 {
+    margin: 0;
+
+}
+
+.veiculo_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+.veiculo_status {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+}
+
+.veiculo_status h4 {
+    font-weight: 500;
+}
+
+.veiculo_status span {
+    color: #06D6A0;
+}
+
+.pagination_button {
+    margin-bottom: 1px;
+}   
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    /* position: absolute;
+    bottom: 0%; */
+    padding: 10px;
+}
+
+#titulorodape {
+    font-size: 20px;
+    color: #BDC3C7;
+}
+
+.titulorodape1 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #BDC3C7;
+
+}
+
+.titulorodape2 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #BDC3C7;
+}
+
+
+/* Pagination */
+.pagination_button_container {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.pagination_button {
+    background-color: grey;
+    padding: 8px 16px;
+    border: none;
+}
+
+.active {
+    background-color: #06d6a0;
+    color: #fff;
+}
+
+/* Pesquisa */
+#renderizaPesquisa {
+
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+
+}
+
+.pesquisaCard {
+    background-color: #E7EDEE;
+    padding: 20px;
+    margin-left: 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pesquisaCard:hover {
+    text-decoration: none;
+}
+
+.pesquisaCard h4 {
+    margin: 0;
+    margin-top: 8px;
+    color: #000;
+}
+
+.pesquisaCard span {
+    padding: 5px;
+    font-size: 16px;
+    color: #000;
+}
+
+.imgContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.imgPesquisa {
+    height: 200px;
+    width: 200px;
 }

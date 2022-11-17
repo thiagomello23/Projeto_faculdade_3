@@ -255,6 +255,11 @@ footer {
     cursor: pointer;
 }
 
+.form_img {
+    width: 100%;
+    height: 300px;
+}
+
 /* Apenas para a pagina de eventos */
 .form_input_select {
     padding: 10px;
@@ -269,6 +274,10 @@ footer {
     font-size: 18px;
     font-weight: 500;
     min-height: 200px;
+}
+
+.padding {
+    padding-bottom: 80px;
 }
 
 /* Alerts */

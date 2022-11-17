@@ -19,7 +19,8 @@
 </head>
 
 <body>
-    <main>
+
+    <!-- <main>
         <div id="menu">
             <ul id="ulmenu">
                 <a href="../trab2semestre.html">
@@ -33,18 +34,17 @@
                 </a>
             </ul>
         </div>
-        <!-- fim Menu fim Menu -->
+
         <p id="titulopagina">Informações do veiculo</p>
         <div id="informacoesdoveiculo">
             <div id="caixaesquerda">
-                <!-- <div> -->
+
                 <div id="foto"></div>
-                <!-- </div> -->
-                <!-- <p>Alterar Foto</p> -->
+
             </div>
             <div id="caixadireita">
                 <div id="dadosinformacoesempresa">
-                    <!-- lista dados dinamicos -->
+
                     <div id="dadosveiculo">
                         <ul id="dadosul">
                             <li>Modelo :</li>
@@ -53,8 +53,6 @@
                             <li>Status :</li>
                         </ul>
                     </div>
-
-                    <!-- lista dados dinamicos -->
 
                 </div>
             </div>
@@ -67,15 +65,11 @@
         <div id="informacoesdofuncionario">
             <div id="caixadireitafuncionario">
                 <div id="dadosinformacoesfuncionario">
-                    <!-- lista dados dinamicos -->
                     <div id="dadosfuncionario">
                         <p>Nome do funcionário</p><span>Nome</span>
                         <p>Telefone :</p><span>Telefone</span>
                         <p>Identificador :</p><span>sem identificação</span>
                     </div>
-
-                    <!-- lista dados dinamicos -->
-
                 </div>
                 <div id="editar_funcionario_caixa">
                     <div id="linhadebaixo">
@@ -114,7 +108,78 @@
             <p class="titulorodape1">Informações da Frota</p>
             <p class="titulorodape2">Todos os Direitos reservados ₢</p>
         </Footer>
-    </main>
-</body>
+    </main> -->
 
+    <main class="main_container">
+        <header class="header_container">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="menu.html">Perfil</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="info_veiculo">
+            <h1>Informações do veiculo</h1>
+            <div class="info_veiculo_content">
+                <div>
+                    <img src="" alt="" class="veiculo_image" id="veiculoImage">
+                </div>
+                <div>
+                    <ul class="info_veiculo_dados">
+                        <li>Modelo: <span id="modelo">Carro muito foda</span></li>
+                        <li>Renavan: <span id="renavan">111111111111</span></li>
+                        <li>Placa: <span id="placa">QBW-11</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <button class="info_veiculo_btn">
+                <a href="#" id="edicaoVeiculoId">Editar Veiculo</a>
+            </button>
+        </div>
+
+        <div class="info_funcionario">
+            <h1>Informações do funcionario</h1>
+            <div class="info_funcionario_dados" id="funcionarioDados">
+                <h2 id="nome"></h2>
+                <h3 class="font-weight"></h3>
+                <h4 id="telefone"></h4>
+                <h3 class="font-weight"></h3>
+                <h4 id="identificador"></h4>
+            </div>
+
+            <a href="" id="funcionarioBtn" class="info_veiculo_btn">Editar Dados</a>
+            
+        </div>
+
+        <div class="info_eventos">
+            <h1>Eventos</h1>
+
+            <div id="eventosDados">
+
+            </div>
+
+            <!-- <a href="">visualizar todos os eventos</a> -->
+
+            <a href="#" id="eventosBtn" class="info_veiculo_btn">Cadastrar Eventos</a>
+
+        </div>
+
+    </main>
+
+    <Footer>
+        <p id="titulorodape">Serviços</p>
+        <p class="titulorodape1">Login/Registro</p>
+        <p class="titulorodape1">Menu de Usuário</p>
+        <p class="titulorodape1">Adicionar novo veículo</p>
+        <p class="titulorodape1">Informações da Frota</p>
+        <p class="titulorodape2">Todos os Direitos reservados ₢</p>
+    </Footer>
+
+    <script src="../_script/visualizacaoveiculo.js"></script>
+
+</body>
 </html>

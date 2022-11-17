@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- fontawesome -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!--<script src="https://kit.fontawesome.com/89322f4ae0.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="../_wwp/_css/all.css">
+    <link rel="stylesheet" href="../_css/style_cad_veiculo.css">
+    <title>Projeto 2° Semestre</title>
+</head>
+
+<body>
+
+    <main class="main_container">
+        <header class="header_container">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="./menu.html">Perfil</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="form_title">
+            <h1>Edição dos dados da empresa</h1>
+            <span>Edite as informações da sua empresa!</span>
+        </div>
+        <div class="form_container padding">
+            <form action="" class="form_container_content" enctype="multipart/form-data">
+                
+                <div class="alert alert_danger hidden" id="alertCadastro"></div>
+
+                <div class="form_div">
+                    <label for="" class="form_input_label">Nova senha:</label>
+                    <input type="text" placeholder="Digite sua nova senha" class="form_input" id="senha">
+                </div>
+                <div class="form_div">
+                    <label for="" class="form_input_label">Confirmar nova senha:</label>
+                    <input type="text" placeholder="Confirme sua nova senha" class="form_input" id="confirmaSenha">
+                </div>
+
+                <div>
+                    <h3 class="form_input_label">Foto da empresa:</h3>
+                    <img src="" alt="" class="form_img" id="formImg">
+                    <label for="empresaImg" class="inputFileLabel">Editar arquivo</label>
+                    <input type="file" class="hidden" id="empresaImg">
+                </div>
+
+                <button type="submit" class="form_btn" id="editBtn">Editar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="../_script/edicaoempresa.js"></script>
+
+</body>
+</html>

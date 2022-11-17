@@ -6,10 +6,11 @@ const alertCadastro = document.getElementById('alertCadastro');
 cadastroBtn.addEventListener('click', async (e) => {
     e.preventDefault();
 
-    const modelo = document.getElementById('modelo').value;
-    const renavan = document.getElementById('renavan').value;
-    const placaVeiculo = document.getElementById('placaVeiculo').value;
-    const veiculoimg = document.getElementById('veiculoImg').files[0];
+    const modelo = document.getElementById('modelo');
+    const renavan = document.getElementById('renavan');
+    const placaVeiculo = document.getElementById('placaVeiculo');
+    const veiculoImg = document.getElementById('veiculoImg')
+    const file = veiculoImg.files[0];
 
     // Verificacao dos dados
     if(!modelo || !renavan || !placaVeiculo) {
@@ -17,19 +18,26 @@ cadastroBtn.addEventListener('click', async (e) => {
         return;
     }
 
+    const dadosForm = new FormData();
+    dadosForm.append('modelo', modelo.value);
+    dadosForm.append('renavan', renavan.value);
+    dadosForm.append('placaVeiculo', placaVeiculo.value);
+    dadosForm.append('veiculoImg', file);
+
     const requisicao = await fetch('http://localhost:3000/veiculos/', {
         method: 'post',
         headers: {
-            'authorization': localStorage.getItem('verification'),
-            'Content-Type': 'application/json'
+            'authorization': localStorage.getItem('verification')
         },
-        body: JSON.stringify({
-            modelo: modelo,
-            renavan: renavan,
-            placaVeiculo: placaVeiculo,
-            veiculoimg: veiculoimg
-        })
+        body: dadosForm
     })
+
+    // JSON.stringify({
+    //     modelo: modelo.value,
+    //     renavan: renavan.value,
+    //     placaVeiculo: placaVeiculo.value,
+    //     veiculoImg
+    // })
 
     const resposta = await requisicao.json();
 

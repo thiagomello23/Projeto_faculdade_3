@@ -88,26 +88,26 @@
             <span>Preencha todos os campos para cadastrar seu veiculo!</span>
         </div>
         <div class="form_container">
-            <form action="" class="form_container_content">
+            <form action="" class="form_container_content" enctype="multipart/form-data" id="testeForm">
                 <div class="alert alert_danger hidden" id="alertCadastro"></div>
 
                 <div class="form_div">
                     <label for="" class="form_input_label">Modelo:</label>
-                    <input type="text" placeholder="Digite o modelo do carro" class="form_input" id="modelo">
+                    <input type="text" placeholder="Digite o modelo do carro" class="form_input" id="modelo" name="modelo">
                 </div>
                 <div class="form_div">
                     <label for="" class="form_input_label">Renavan:</label>
-                    <input type="text" placeholder="Digite o renavan do carro" class="form_input" id="renavan">
+                    <input type="text" placeholder="Digite o renavan do carro" class="form_input" id="renavan" name="renavan">
                 </div>
                 <div class="form_div">
                     <label for="" class="form_input_label">Placa do veiculo:</label>
-                    <input type="text" placeholder="Digite a placa do veiculo" class="form_input" id="placaVeiculo">
+                    <input type="text" placeholder="Digite a placa do veiculo" class="form_input" id="placaVeiculo" name="placaVeiculo">
                 </div>
 
                 <div>
                     <h3 class="form_input_label">Foto do veiculo:</h3>
                     <label for="veiculoImg" class="inputFileLabel">Enviar arquivo</label>
-                    <input type="file" class="hidden" id="veiculoImg">
+                    <input type="file" class="hidden" id="veiculoImg" name="veiculoImg">
                 </div>
 
                 <button type="submit" class="form_btn" id="cadastroBtn">Cadastrar</button>

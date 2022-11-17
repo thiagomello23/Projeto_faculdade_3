@@ -7,7 +7,8 @@ function checkToken(req, res, next) {
 
     if(!token) {
         return res.status(401).json({
-            msg: "Acesso negado"
+            msg: "Acesso negado",
+            error: true
         })
     }
 
@@ -21,7 +22,8 @@ function checkToken(req, res, next) {
 
     }catch (err) {
         return res.status(401).json({
-            msg: "Acesso negado"
+            msg: "Acesso negado",
+            error: true
         })
     }
 

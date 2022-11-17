@@ -204,7 +204,28 @@ body {
 }
 
 /* Alerts */
+.alert {
+    width: 100%;
+    padding: 20px;
+    word-wrap: break-word;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .alert_danger {
+    background-color: #FF4D6D;
+}
+
+.alert_sucess {
+    background-color: #0EAD69;
+}
+
+.hidden {
+    display: none;
+}
+
+/* .alert_danger {
     width: 100%;
     background-color: #FF4D6D;
     margin-bottom: 20px;
@@ -216,4 +237,4 @@ body {
 
 .hidden {
     display: none;
-}
+} */

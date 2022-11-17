@@ -17,12 +17,12 @@ btnCadastro.addEventListener('click', async (e) => {
 
     // Validacao
     if(!nomeEmpresa || !emailContato || !cnpj || !senha || !confirmaSenha) {
-        ativaAlertUsuario(alertReg, 'Por favor preencha todos os campos!');
+        alertCadastroHandler(alertReg, 'Por favor preencha todos os campos!', true);
         return;
     }
 
     if(senha !== confirmaSenha) {
-        ativaAlertUsuario(alertReg, 'As senhas devem ser iguais!')
+        alertCadastroHandler(alertReg, 'As senhas devem ser iguais!', true)
         return;
     }
 
@@ -44,10 +44,11 @@ btnCadastro.addEventListener('click', async (e) => {
 
     if(resposta.error) {
         // Colocar alerts no front
-        ativaAlertUsuario(alertReg, resposta.message)
+        alertCadastroHandler(alertReg, resposta.message, true)
     } else {
-        // Redirecionamento
-        window.location.assign('file:///C:/Users/W10/Desktop/a/Curso/Faculdade/Desenvolvimento/Projeto-2-semestre-main/trab2semestre.html');
+
+        alertCadastroHandler(alertReg, 'Cadastrado com sucesso!', false)
+        
     }
 
     return;
@@ -65,7 +66,7 @@ btnLogin.addEventListener('click', async (e) => {
 
     // Validar
     if(!emailLogin || !senhaLogin) {
-        ativaAlertUsuario(alertLog, 'Por favor preencha todos os campos!')
+        alertCadastroHandler(alertLog, 'Por favor preencha todos os campos!', true)
         return;
     }
 
@@ -85,15 +86,18 @@ btnLogin.addEventListener('click', async (e) => {
 
     if(resposta.error) {
         // Alert no front
-        ativaAlertUsuario(alertLog, resposta.message);
+        alertCadastroHandler(alertLog, resposta.message, true);
     } else {
         // Salva o token 
         const token = resposta.token;
 
         localStorage.setItem('verification', token);
 
-        // Redirect
-        window.location.assign('file:///C:/Users/W10/Desktop/a/Curso/Faculdade/Desenvolvimento/Projeto-2-semestre-main/trab2semestre.html');
+        if(localStorage.getItem('verification')) {
+            // Redirecionamento
+            window.location.assign('menu.html');
+        }
+
     }
 
     return;
@@ -101,8 +105,10 @@ btnLogin.addEventListener('click', async (e) => {
 })
 
 // Funcoes
-function ativaAlertUsuario(el, msg) {
+function alertCadastroHandler(el, msg, error) {
 
+    let className = error ? 'alert_danger' : 'alert_sucess';
+    el.classList.add(className);
     el.classList.remove('hidden');
     el.textContent = msg;
 

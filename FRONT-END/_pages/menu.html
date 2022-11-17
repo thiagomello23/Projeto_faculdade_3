@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <!-- fontawesome -->
-
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <!--<script src="https://kit.fontawesome.com/89322f4ae0.js" crossorigin="anonymous"></script>-->
     <link rel="stylesheet" href="../_wwp/_css/all.css">
     <link rel="stylesheet" href="../_css/style_menu.css">
@@ -19,7 +16,8 @@
 </head>
 
 <body>
-    <main>
+    
+    <!-- <main>
         <div id="menu">
             <ul id="ulmenu">
                 <a href="../trab2semestre.html">
@@ -33,19 +31,19 @@
                 </a>
             </ul>
         </div>
-        <!-- fim Menu fim Menu -->
+        
         <div id="dadosempresa">
             <div id="caixaesquerda">
                 <div>
                     <div id="foto"></div>
                 </div>
                 <p>Alterar Foto</p>
-                <!-- <p>Alterar Foto</p> -->
+                
             </div>
             <div id="caixadireita">
                 <div id="textoinformacoesempresa">Informacoes da Empresa</div>
                 <div id="dadosinformacoesempresa">
-                    <!-- lista dados dinamicos -->
+                    
                     <div id="dadosempresa2">
                         <ul id="dadosul">
                             <li>Nome da Empresa</li>
@@ -65,14 +63,13 @@
                         </ul>
                     </div>
 
-                    <!-- lista dados dinamicos -->
+                    
 
                 </div>
                 <div id="trocasenha">Trocar senha</div>
             </div>
         </div>
-        <!-- </div> -->
-        <!-- Div home -->
+        
         <div id="paraqueserve">
             <div id="caixalista">
                 <p class="caixalistatitulo">Veiculos cadastrados</p>
@@ -151,7 +148,82 @@
             <p class="titulorodape1">Informações da Frota</p>
             <p class="titulorodape2">Todos os Direitos reservados ₢</p>
         </Footer>
+    </main> -->
+
+    <main class="main_container">
+        <header class="header_container">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="../trab2semestre.html">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Perfil</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="info_empresa_container">
+            <div class="info_empresa_image">
+                <img src="" alt="" id="empresaImg">
+                <div><a href="./edicaoempresa.html" class="info_empresa_btn">Alterar Foto</a></div>
+            </div>
+            <div class="info_empresa_conteudo">
+                <h1>Informações da empresa</h1>
+                <!-- Dados dinamicos -->
+                <div class="info_empresa_dados">
+                    <ul class="info_empresa_sensivel">
+                        <li>
+                            Nome da empresa
+                            <span id="empresaId">Empresa</span>
+                        </li>
+                        <li>
+                            Email
+                            <span id="emailId">email</span>
+                        </li>
+                        <li>
+                            CNPJ
+                            <span id="cnpjId">cnpj</span>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <a href="./edicaoempresa.html" class="info_empresa_btn">Trocar Senha</a>
+            </div>
+        </div>
+
+        <div class="info_empresa_veiculos">
+            <h1>Veiculos cadastrados</h1>
+            <div class="barra_pesquisa">
+                <form id="formPesquisa">
+                    <input type="text" placeholder="Pesquise via modelo" id="pesquisa">
+                </form>
+            </div>
+
+            <div class="pagination_container" id="paginationContainer">
+
+                <!-- Renderizado via JS -->
+
+            </div>
+
+            <div class="pagination_button_container" id="paginationButtonContainer"> 
+                
+                <!-- Renderizado via HTML -->
+
+            </div>
+
+            <div><a href="./cadastrodeveiculo.html" class="info_empresa_btn">Cadastre um novo veiculo</a></div>
+
+        </div>
+
     </main>
+
+    <Footer>
+        <p id="titulorodape">Serviços</p>
+        <p class="titulorodape1">Login/Registro</p>
+        <p class="titulorodape1">Menu de Usuário</p>
+        <p class="titulorodape1">Adicionar novo veículo</p>
+        <p class="titulorodape1">Informações da Frota</p>
+        <p class="titulorodape2">Todos os Direitos reservados ₢</p>
+    </Footer>
 
     <script src="../_script/menu.js"></script>
 

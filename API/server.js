@@ -17,14 +17,12 @@ const eventosRoute = require('./src/routes/eventosRoute');
 // Middlewares 
 app.use(cors());
 
-// {
-//     allowedHeaders: ['Content-Type', 'Authorization'],
-//     origin: "*",
-//     preflightContinue: true,
-//     credentials: true
-// }
-
-app.use(express.json());
+app.use(express.json({
+    strict: false
+}));
+app.use(express.urlencoded({
+    extended: true
+}))
 
 ////////////////////
 /////////// ROTAS

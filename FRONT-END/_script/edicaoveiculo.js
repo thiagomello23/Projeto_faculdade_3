@@ -5,8 +5,9 @@ const editBtn = document.getElementById('editBtn');
 const modelo = document.getElementById('modelo')
 const renavan = document.getElementById('renavan');
 const placaVeiculo = document.getElementById('placaVeiculo');
-const veiculoimg = document.getElementById('veiculoImg').files[0];
+const veiculoImg = document.getElementById('veiculoImg');
 const alertCadastro = document.getElementById('alertCadastro');
+const formImg = document.getElementById('formImg');
 
 // Pega os dados da URL
 const url = new URLSearchParams(window.location.search);
@@ -32,6 +33,8 @@ function insertData(data) {
     modelo.value = data.modelo;
     renavan.value = data.renavan;
     placaVeiculo.value = data.placaVeiculo;
+    formImg.src = '../../API/src/images/veiculos/' + data.veiculoImgPath
+    ;
 
     // Falta a imagem
 
@@ -56,19 +59,22 @@ editBtn.addEventListener('click', async (e) => {
         return;
     }
 
+    const file = veiculoImg.files[0];
+
+    const formData = new FormData();
+    formData.append('modelo', modelo.value);
+    formData.append('renavan', renavan.value);
+    formData.append('placaVeiculo', placaVeiculo.value);
+    formData.append('veiculoId', veiculoId);
+    formData.append('veiculoImg', file)
+
     // Fetch data
     const requisicao = await fetch('http://localhost:3000/veiculos', {
         method: 'put',
         headers: {
-            'authorization': localStorage.getItem('verification'),
-            'Content-type': 'application/json'
+            'authorization': localStorage.getItem('verification')
         },
-        body: JSON.stringify({
-            modelo: modelo.value,
-            renavan: renavan.value,
-            placaVeiculo: placaVeiculo.value,
-            veiculoId: veiculoId
-        })
+        body: formData
     })
 
     const resposta = await requisicao.json();

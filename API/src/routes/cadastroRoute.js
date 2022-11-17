@@ -70,7 +70,6 @@ router.post('/cadastro', async (req, res) => {
     res.status(200).json({
         error: false,
         message: "Cadastrado com sucesso",
-        token: token
     })
 
 });
@@ -97,22 +96,40 @@ router.get('/cadastro/', checkToken, async (req, res) => {
 
 // Update dos dados de um cadastro em especifico
 // rota para adicionar imagens ou trocar de senha
-router.put('/cadastro', upload.single('empresaImg'), async (req, res) => {
+router.put('/cadastro/', upload.single('empresaImg'), checkToken, async (req, res) => {
 
     let imgName;
-    const { empresaId } = req.body;
+    let hashSenha = '';
 
-    if(!empresaId) return res.status(500).json(messageHandler('Dados invalidos!'))
+    // Por enquanto atualiza apenas imagens
+    const { senha, confirmaSenha } = req.body;
+
+    // Validacao dos dados
+    if(senha) {
+        if(senha.length < 8 || senha != confirmaSenha) {
+            return res.status(500).json(messageHandler(
+                'Senha invalida!'
+            ))
+        }else {
+            // CRIPTOGRAFANDO SENHA
+            hashSenha = await bcrypt.hash(senha, 10);
+        }
+    }
+
+    // Pegar os dados do ID da empresa via JWT
+    const token = req.headers['authorization'];
+    const tokenData = jwt.decode(token);
 
     if(req.file) {
         imgName = req.file.filename;
     }
 
     await Empresa.update({
-        empresaImgPath: imgName ? imgName : ''
+        empresaImgPath: imgName ? imgName : '',
+        senha: hashSenha
     }, {
         where: {
-            id: empresaId
+            id: tokenData.id
         }
     })
 

@@ -49,33 +49,6 @@ router.post('/eventos', async (req, res) => {
 
 })
 
-// Puxar todos os eventos (provavelmente pagination)
-router.get('/eventos/veiculo/:veiculoId', async (req, res) => {
-
-    const veiculoId = req.params.veiculoId;
-
-    if(!veiculoId)
-    return res.status(500).json(messageHandler(
-        'Houve um erro, tente novamente!'
-    ))
-
-    // Puxa os dados
-    const data = await EventosVeiculos.findAll({
-        where: {
-            veiculoid: veiculoId
-        }
-    })
-
-    if(!data || data.length == 0) 
-    return res.status(500).json(messageHandler(
-        'Nenhum dado encontrado!'
-    ))
-
-    // Retorna os dados
-    res.status(200).json(data);
-
-});
-
 // Puxar um evento em especifico
 router.get('/eventos/:eventoId', async (req, res) => {
 

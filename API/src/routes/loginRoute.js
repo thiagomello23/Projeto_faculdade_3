@@ -52,19 +52,4 @@ router.post('/login', async (req, res) => {
 
 });
 
-router.get('/logout', async (req, res) => {
-
-    try {
-
-    } catch(err) {
-        return res.status(500).json("Erro ao finalizar sessao");
-    }
-
-    res.status(200).json(messageHandler(
-        "Sessao finalizada com sucesso",
-        false
-    ));
-
-});
-
 module.exports = router;
