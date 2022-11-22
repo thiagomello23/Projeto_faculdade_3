@@ -1,3 +1,4 @@
+const logout = document.getElementById('logout');
 
 async function changeTemplate() {
 
@@ -6,11 +7,19 @@ async function changeTemplate() {
     if(!token) return;
 
     const loginRegistro = document.getElementById('loginRegistro');
-    const loginRegistroHref = document.getElementById('loginRegistroHref');
 
     loginRegistro.textContent = 'Perfil';
-    loginRegistroHref.href = './_pages/menu.html'
+    loginRegistro.href = './_pages/menu.html'
+    logout.textContent = 'Logout';
 
 }
+
+// Logout
+logout.addEventListener('click', () => {
+
+    localStorage.setItem('verification', '');
+    window.location.reload();
+
+})
 
 changeTemplate();

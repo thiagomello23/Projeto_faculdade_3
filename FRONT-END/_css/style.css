@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     width: 100%;
     height: 100%;
     background-color: black;
@@ -17,14 +17,12 @@ main {
 #home {
     width: 100%;
     min-height: 100vh;
-    /*background-color: rgba(255, 8, 8, 0.918);*/
     background-image: url(../_img/mecanica.png);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../_img/mecanica.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/* inicio do menu */ /* inicio do menu */ /* inicio do menu */
 #menu {
     margin-top: 10px;
     margin-right: 15px;
@@ -38,14 +36,14 @@ main {
 ul {
     color: rgb(2, 0, 0);
     font-weight: 900;
-    list-style-type: none;     /* tira o circlo */
-    text-decoration: none;     /* tira o soblinhado */
-    text-align: right;         /* centraliza o texto */
+    list-style-type: none;     
+    text-decoration: none;     
+    text-align: right;         
 }
 
 li {
     margin-left: 15px;
-    display: inline-block;     /* deixa o testo na horisontal */
+    display: inline-block;     
     color: rgb(255, 255, 255);
 }
 
@@ -54,11 +52,9 @@ a {
     color: rgb(255, 255, 255);
 }
 
-/* fim do menu */ /* fim do menu */ /* fim do menu */
 
 #cabecalho {
     margin-left: 180px;
-    /*text-align: center;*/
     font-size: 40px;
     font-weight: 700;
     color: #fff;
@@ -84,9 +80,6 @@ a {
 #paraqueserve {
     width: 100%;
     height: 721px;
-    /* background-image: url(_img/carrepair-img-10.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%; */
     background-color: #EAF4F4;
 }
 
@@ -95,8 +88,6 @@ a {
     height: 721px;
     float: left;
     color: black;
-    /*border: 1px solid yellowgreen;*/
-
 }
 
 #caixatexto {
@@ -104,7 +95,6 @@ a {
     margin: auto;
     width: 70%;
     height: 600px;
-    /*border: 1px solid red;*/
 }
 
 #titulo {
@@ -143,7 +133,6 @@ a {
     margin: auto;
     width: 80%;
     height: 150px;
-    /*background-color: #06859b;*/
     color: black;
     font-size: 44px;
     text-align: center;
@@ -168,7 +157,6 @@ a {
     height: 350px;
     border: 0px solid rgb(4, 0, 255);
     margin: 0px 20px 0px 20px;
-    /*background-image: url(_img/pontos.png);*/
     color: black;
     justify-content: center;
 }
@@ -249,4 +237,184 @@ footer {
     font-size: 15px;
     color: #BDC3C7;
 
+} */
+
+.hero--section {
+    height: 100vh;
+    background-image: url(../_img/mecanica.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../_img/mecanica.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header_container {
+
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    position: relative;
+    padding: 10px;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    margin: 0;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero--content {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    width: 400px;
+}
+
+.hero--content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero--btn {
+    width: 100%;
+    border: none;
+    background-color: #2EC4B6;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero--btn:hover {
+    background-color: #35a69a;
+}
+
+.intro--produto {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    background-color: #EAF4F4;
+}
+
+.intro--produto--content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.intro--produto--content p {
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.intro--title {
+    border-bottom: 3px solid black;
+    padding-bottom: 5px;
+}
+
+.intro--btn {
+    width: 350px;
+    border: none;
+    background-color: #2EC4B6;
+    color: #fff;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.intro--btn:hover {
+    opacity: 0.7;
+}
+
+.intro--produto--img--container {
+    width: 50%;
+    height: 100%;
+}
+
+.image--intro {
+    width: 100%;
+    height: 100%;
+}
+
+.porque--utilizar {
+    width: 100%;
+    height: 650px;
+    background-color: #E7EDEE;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.porque--utilizar h1 {
+    margin-bottom: 40px;
+}
+
+.card--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 300px;
+}
+
+.card--porque {
+    background-color: #fff;
+    width: 20%;
+    padding: 25px;
+    height: 100%;
+}
+
+.card--porque p {
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    /* position: absolute;
+    bottom: 0%; */
+    padding: 10px;
+}
+
+#titulorodape {
+    font-size: 20px;
+    color: #BDC3C7;
+}
+
+.titulorodape1 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #BDC3C7;
+
+}
+
+.titulorodape2 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #BDC3C7;
 }

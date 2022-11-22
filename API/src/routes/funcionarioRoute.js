@@ -37,7 +37,7 @@ router.post('/funcionarios', async (req, res) => {
 
     const { veiculoId, nome, telefone, identificadorEmpresa } = req.body;
 
-    // Validacao dos dados
+    // Validacao dos dados  
     if(!veiculoId || !nome || !telefone) 
     return res.status(500).json(messageHandler(
         'Por favor, preencha todos os campos!'
@@ -101,30 +101,30 @@ router.put('/funcionarios', async (req, res) => {
 
 })
 
-// Deleta um usuario em especifico
-router.delete('/funcionario/:funcionarioId', async (req, res) => {
+// // Deleta um usuario em especifico
+// router.delete('/funcionario/:funcionarioId', async (req, res) => {
 
-    const funcionarioId = req.params.funcionarioId;
+//     const funcionarioId = req.params.funcionarioId;
 
-    // Validacao
-    if(!funcionarioId) 
-    return res.status(500).json(messageHandler(
-        'Houve um erro, tente novamente!'
-    ));
+//     // Validacao
+//     if(!funcionarioId) 
+//     return res.status(500).json(messageHandler(
+//         'Houve um erro, tente novamente!'
+//     ));
 
-    // Delete dos dados da database
-    await Funcionarios.destroy({
-        where: {
-            id: funcionarioId 
-        }
-    })
+//     // Delete dos dados da database
+//     await Funcionarios.destroy({
+//         where: {
+//             id: funcionarioId 
+//         }
+//     })
 
-    // Retorna resposta
-    res.status(200).json(messageHandler(
-        'Funcionario excluido com sucesso!',
-        false
-    ))
+//     // Retorna resposta
+//     res.status(200).json(messageHandler(
+//         'Funcionario excluido com sucesso!',
+//         false
+//     ))
 
-})
+// })
 
 module.exports = router;

@@ -120,7 +120,4 @@ router.put('/eventos', checkToken, async (req, res) => {
 
 });
 
-// Deletar um evento especifico
-router.delete('/eventos/:eventoId');
-
 module.exports = router;

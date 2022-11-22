@@ -215,10 +215,12 @@ body {
 
 .alert_danger {
     background-color: #FF4D6D;
+    padding: 10px;
 }
 
 .alert_sucess {
     background-color: #0EAD69;
+    padding: 10px;
 }
 
 .hidden {

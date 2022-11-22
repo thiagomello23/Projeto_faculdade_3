@@ -20,6 +20,8 @@ async function pesquisaData() {
 
     const resposta = await requisicao.json();
 
+    console.log(resposta);
+
     montaPesquisaData(resposta);
 
 }
@@ -28,6 +30,11 @@ function montaPesquisaData(data) {
 
     let html = '';
     const renderizaPesquisa = document.getElementById('renderizaPesquisa');
+
+    if(data.message) {
+        renderizaPesquisa.innerHTML = '<h1 class="pesquisa--alert">Nenhum veiculo encontrado!</h1>'
+        return;
+    }
 
     for(let i = 0; i < data.length; i++) {
 

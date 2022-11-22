@@ -21,10 +21,6 @@ router.get('/veiculos/all', checkToken, async (req, res) => {
     const token = req.headers['authorization'];
     const data = jwt.decode(token);
 
-    // // Paginacao
-    // const limit = req.query.limit;
-    // const offset = req.query.offset;
-
     if(!data.id) return res.status(500).json(messageHandler("Dados invalidos!"))
 
     const veiculosDados = await Veiculos.findAll({
@@ -55,12 +51,10 @@ router.get('/veiculos/:veiculoId', checkToken, async (req, res) => {
         include: [
             Funcionarios,
             EventosVeiculos
-        ]
+        ],
     })
 
     if(!veiculoData) return res.status(500).json(messageHandler("Veiculo nao encontrado!"))
-
-    console.log(veiculoData);
 
     res.status(200).json(veiculoData);
 
@@ -186,26 +180,6 @@ router.put('/veiculos/', upload.single('veiculoImg'), checkToken, async (req, re
         false
     ))
 
-
-});
-
-// deleta um veiculo
-router.delete('/veiculos/:veiculoId', checkToken, async (req, res) => {
-
-    const veiculoId = req.params.veiculoId;
-
-    if(!veiculoId) return res.status(500).json(messageHandler("Dados invalidos!"));
-
-    await Veiculos.destroy({
-        where: {
-            id: veiculoId
-        }
-    })
-
-    res.status(200).json(messageHandler(
-        "Veiculo deletado com sucesso!",
-        false
-    ))
 
 });
 

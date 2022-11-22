@@ -7,7 +7,10 @@ const veiculoId = url.get('id');
 const edicaoVeiculoId = document.getElementById('edicaoVeiculoId');
 const eventosBtn = document.getElementById('eventosBtn');
 
+const MAX_EVENTOS = 5;
+
 async function getData() {
+
 
     if(!veiculoId || isNaN(veiculoId)) {
         window.location.assign('menu.html')
@@ -22,6 +25,8 @@ async function getData() {
     })
 
     const resposta = await requisicao.json();
+
+    console.log(resposta)
 
     insertData(resposta);
 
@@ -49,6 +54,7 @@ function insertData(data) {
     // Excecoes
     const funcionarioDados = document.getElementById('funcionarioDados');
     const funcionarioBtn = document.getElementById('funcionarioBtn');
+    const eventosView = document.getElementById('eventosView');
 
     // Funcionario
     if(!data.funcionario) {
@@ -79,7 +85,10 @@ function insertData(data) {
 
         let eventosVeiculosHtml = ''
 
-        for(let i = 0; i < data.eventosveiculos.length; i++) {
+        for(let i = 0; i < MAX_EVENTOS; i++) {
+
+            if(data.eventosveiculos[i] == null) break;
+
             eventosVeiculosHtml += `
                 <a href="edicaoevento.html?id=${data.eventosveiculos[i].id}" class="evento_conteudo">
                     <h3>${data.eventosveiculos[i].nomeEvento}</h3>
@@ -99,6 +108,7 @@ function insertData(data) {
     // Aba de navegacao
     edicaoVeiculoId.href = `edicaoveiculo.html?id=${data.id}`
     eventosBtn.href = `cadastrodeeventos.html?id=${data.id}`
+    eventosView.href = `vertodoseventos.html?id=${veiculoId}`
 
 }
 

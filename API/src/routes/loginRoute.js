@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const messageHandler = require('../helper/messageHandler');
 const jwt = require('jsonwebtoken');
 
-// LOGIN/LOGOUT
+// LOGIN
 router.post('/login', async (req, res) => {
 
     // DADOS 

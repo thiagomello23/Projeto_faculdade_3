@@ -10,7 +10,7 @@ const cors = require('cors');
 const cadastradoRoute = require('./src/routes/cadastroRoute');
 const loginRoute = require('./src/routes/loginRoute');
 const veiculoRoute = require('./src/routes/veiculoRoute');
-const pesquisaRoute = require('./src/routes/pesquisaRoute')
+const pesquisaRoute = require('./src/routes/pesquisaRoute');
 const funcionarioRoute = require('./src/routes/funcionarioRoute');
 const eventosRoute = require('./src/routes/eventosRoute');
 
@@ -22,7 +22,7 @@ app.use(express.json({
 }));
 app.use(express.urlencoded({
     extended: true
-}))
+}));
 
 ////////////////////
 /////////// ROTAS
