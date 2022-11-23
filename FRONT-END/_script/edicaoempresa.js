@@ -24,7 +24,13 @@ async function getData() {
         // Redirect
         return window.location.assign('logreg.html');
     } else {
-        formImg.src = '../../API/src/images/empresa/' + resposta.empresaImgPath;
+
+        if(resposta.empresaImgPath) {
+            formImg.src = '../../API/src/images/empresa/' + resposta.empresaImgPath;
+        } else {
+            formImg.src = '../_img/imagem-padrao.png';
+        }
+
     }
 
 }
@@ -74,5 +80,15 @@ function alertCadastroHandler(error, msg) {
     alertCadastro.textContent = msg;
 
 }
+
+// Logout
+const logout = document.getElementById('logout');
+
+logout.addEventListener('click', () => {
+
+    localStorage.setItem('verification', '');
+    window.location.assign('../trab2semestre.html');
+
+})
 
 getData();

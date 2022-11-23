@@ -112,4 +112,14 @@ function insertData(data) {
 
 }
 
+// Logout
+const logout = document.getElementById('logout');
+
+logout.addEventListener('click', () => {
+
+    localStorage.setItem('verification', '');
+    window.location.assign('../trab2semestre.html');
+
+})
+
 getData();

@@ -50,6 +50,16 @@ cadastroBtn.addEventListener('click', async (e) => {
 
 })
 
+// Logout
+const logout = document.getElementById('logout');
+
+logout.addEventListener('click', () => {
+
+    localStorage.setItem('verification', '');
+    window.location.assign('../trab2semestre.html');
+
+})
+
 function alertCadastroHandler(error, msg) {
 
     let className = error ? 'alert_danger' : 'alert_sucess';

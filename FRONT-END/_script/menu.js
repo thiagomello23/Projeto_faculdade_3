@@ -36,7 +36,12 @@ function montaCadastroData(data) {
     empresaId.textContent = data.nomeEmpresa;
     emailId.textContent = data.emailContato;
     cnpjId.textContent = data.cnpj;
-    empresaImg.src = '../../API/src/images/empresa/' + data.empresaImgPath;
+
+    if(data.empresaImgPath) {
+        empresaImg.src = '../../API/src/images/empresa/' + data.empresaImgPath;
+    } else {
+        empresaImg.src = '../_img/imagem-padrao.png';
+    }
 
 }
 
@@ -134,6 +139,17 @@ formPesquisa.addEventListener('submit', async(e) => {
     return window.location.assign(`pesquisa.html?p=${pesquisa.value}`)
 
 })
+
+// Logout
+const logout = document.getElementById('logout');
+
+logout.addEventListener('click', () => {
+
+    localStorage.setItem('verification', '');
+    window.location.assign('../trab2semestre.html');
+
+})
+
 
 // Execucao das funcoes
 cadastroData();

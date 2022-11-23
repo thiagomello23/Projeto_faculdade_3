@@ -89,5 +89,15 @@ editBtn.addEventListener('click', async (e) => {
 
 })
 
+// Logout
+const logout = document.getElementById('logout');
+
+logout.addEventListener('click', () => {
+
+    localStorage.setItem('verification', '');
+    window.location.assign('../trab2semestre.html');
+
+})
+
 // Funcao de inicializacao
 getData();
