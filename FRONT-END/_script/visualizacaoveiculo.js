@@ -26,8 +26,6 @@ async function getData() {
 
     const resposta = await requisicao.json();
 
-    console.log(resposta)
-
     insertData(resposta);
 
 }

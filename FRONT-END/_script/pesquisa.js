@@ -20,8 +20,6 @@ async function pesquisaData() {
 
     const resposta = await requisicao.json();
 
-    console.log(resposta);
-
     montaPesquisaData(resposta);
 
 }

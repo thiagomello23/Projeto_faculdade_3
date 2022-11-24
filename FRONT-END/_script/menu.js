@@ -62,8 +62,12 @@ async function veiculoData() {
 
     const resposta = await requisicao.json();
 
-    montaItemsPagination(resposta, paginaAtual, rowsPerPage, paginationContainer);
-    montaPagination(resposta, paginationButtonContainer, rowsPerPage)
+    if(resposta.error) {
+        paginationContainer.innerHTML = `<h5>${resposta.message}</h5>`
+    } else {
+        montaItemsPagination(resposta, paginaAtual, rowsPerPage, paginationContainer);
+        montaPagination(resposta, paginationButtonContainer, rowsPerPage)
+    }
 
 }
 

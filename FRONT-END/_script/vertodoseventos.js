@@ -21,8 +21,6 @@ async function getData() {
 
     const eventosVeiculos = await resposta.eventosveiculos;
 
-    console.log(eventosVeiculos)
-
     insertData(eventosVeiculos);
 
 }

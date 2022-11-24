@@ -17,8 +17,6 @@ router.post('/cadastro', async (req, res) => {
     // DADOS 
     const { emailContato, nomeEmpresa, cnpj, senha } = req.body;
 
-    console.log(req.body);
-
     // VALIDACAO
     // regras de negocio
     // falta validar email

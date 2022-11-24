@@ -216,6 +216,8 @@ body {
 .alert_danger {
     background-color: #FF4D6D;
     padding: 10px;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
 .alert_sucess {

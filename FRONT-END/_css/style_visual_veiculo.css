@@ -493,3 +493,11 @@ footer {
 .acidente {
     color: #FF4D6D;
 }
+
+.bold {
+    font-weight: bold;
+}
+
+.spanVisualiza {
+    font-weight: 500;
+}
